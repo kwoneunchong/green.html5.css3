@@ -1,0 +1,120 @@
+@charset "UTF-8";
+
+/* 초기화 */
+* { margin: 0; padding: 0; } 
+body { font-family:  'Helvetica', serif; } 
+li { list-style: none; } 
+a { text-decoration: none; } 
+
+/* 헤더 */
+#main_header {
+    height: 45px; /*이미지 높이*/
+    background: url("source/header_background.png");
+    position: relative; /*자식태그는 absolute, height 반드시 지정*/
+    text-align: center; /*수평정렬, block태그에서만 사용가능*/
+    line-height: 45px; /*수직정렬, 높이랑 일치시키면됨*/
+}
+#main_header > h1 {
+    color: white;
+}
+#main_header > a, #main_header > label {
+    display: block; /*170p*/
+    height: 32px;
+    position: absolute;
+}
+#main_header > a.left { /*a태그면서 left를 클래스*/
+    width: 62px;
+    left: 5px; top: 7px;
+}
+#main_header > label.right {
+    width: 32px;
+    right: 5px; top: 7px;
+}
+
+/* 스프라이트 이미지 */
+#main_header > a.left {
+    background: url("source/sprites.png");
+    background-position: 0px 0px; /*스프라이트 이미지 제공, 포지션도 사이트에서 제공*/
+    text-indent: -99999px;
+}
+#main_header > label.right {
+    background: url("source/sprites.png");
+    background-position: -62px 0px; /*스프라이트 이미지 제공, 포지션도 사이트에서 제공*/
+    text-indent: -99999px;
+}
+
+/* 토글 목록 */
+    /*토글구현*/
+#toggle { display: none; }
+#toggle + #wrap > #toggle_gnb_wrap { display: none; }
+#toggle:checked + #wrap > #toggle_gnb_wrap { display: block; }
+    /* 레이아웃 색상 */
+#toggle_gnb_wrap {
+    background: #363636;
+    padding: 15px;
+}
+#toggle_gnb {
+    background: #FFFFFF;
+    padding: 5px; /*가운데 정렬할때 유용하게 사용*/
+}
+    /* 토글목록 */
+#toggle_gnb > ul { /*자식태그 float사용시 부모태그 overflow: hidden*/
+     overflow: hidden; }
+#toggle_gnb > ul > li {
+    /* 수평정렬 */
+       width: 80px; float: left;
+}
+
+/* 내비게이션(1) */
+#top_gnb { 
+    overflow: hidden; /*자식태그 float사용시 부모태그 overflow: hidden*/
+    border-bottom: 1px solid black;
+    background: #b42111;
+}
+#top_gnb > div > a {
+    /* 수평정렬 */
+    float: left;
+    width: 25%; /*크기 비율을 유지하고 싶을때*/
+    /* 크기 및 색상, 정렬 */
+    height: 35px;
+    line-height: 35px;/*수직정렬, 높이랑 일치시키면됨*/
+    text-align: center; /*block태그에서만 사용가능*/
+    color: white;
+}
+
+/* 내비게이션(2) */
+#bottom_gnb { 
+    display: table; /*영역을 table태그 처럼 사용, 자식태그를 table-cell로 줄것*/
+    width: 100%; /*뷰포트와 상관없이 전체가 비율유지 100%를 차지*/
+    border-bottom: 1px solid black;
+}
+#bottom_gnb > div {
+    display: table-cell;
+    position: relative;
+}
+#bottom_gnb > div > a {
+    display: block;
+    height: 35px;
+    line-height: 35px;
+    text-align: center;
+}
+    /* 버튼 사이 세로 구분선 */
+#bottom_gnb > div > a::before {
+    display: block;
+    position: absolute;
+    top: 9px; left: -1px;
+    width: 1px; height: 15px;
+    border-left: 1px solid black;
+    content: '';
+}
+
+/* 본문 */
+#section_header { padding: 20px; }
+#section_article {padding: 10px; } 
+
+/* 푸터 */
+#main_footer {
+    padding: 10px;
+    border-top: 3px solid black;
+    text-align: center;
+}
