@@ -125,6 +125,7 @@ body {
     overflow: hidden;
     padding: 10px;
     background: #3b414d;
+    padding-bottom: 15px;
 }
 #detail_list > ul {
     float: left;
@@ -141,6 +142,50 @@ body {
     text-overflow: ellipsis;
 }
 #detail_list > ul > li.header {
-    padding-left: 15;
+    padding-left: 15px;
+}
+#detail_list > ul > li.header >p {
+    font-weight: bold;
+    color: #48c5ff;
+}
+
 /* 본문 */
+#content { margin-top: 10px; }
+#product_section {
+    overflow: hidden;
+    margin-top: 5px;
+}
+
+#product_section > #product_article {
+    float: left;
+    width: 795px;
+}
+
+#product_section > #product_aside {
+    float: right;
+    padding-bottom: 5px;
+    width: 170px;
+}
+#product_section > #product_article > img { display: block; }
+
 /* 푸터 */
+#main_footer {
+    height: 40px;
+    padding: 10px;
+    margin-bottom: 10px;
+
+    background: #9C9C9C;
+    border-radius: 5px;
+
+    text-align: center;
+}
+
+#main_footer > h1 {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+#main_footer > h2 {
+    font-size: 1.2em;
+    font-weight: bold;
+}
