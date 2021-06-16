@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            display: flex;
+            background-color: #eee;
+            border: 1px solid #222;
+            margin-bottom: 10px;
+        }
+        /* 화면 사이즈를 줄여봐야 보임 */
+        /* 감싸지 않고 한줄에 표시하겠다는것 */
+        .op1 {
+            flex-wrap: nowrap;
+            /* flex-flow: row nowrap <--이런식으로 두가지를 사용할 수 있음 */
+        }
+        /* 감싸주고 사이즈가 줄어들면 내려감 */
+        .op2 {
+            flex-wrap: wrap;
+        }
+        /* wrap인데 사이즈가 줄어들면 순서 바뀌면서(거꾸로) 내려감 */
+        .op3 {
+            flex-wrap: wrap-reverse;
+        }
+        /* .op4 {
+            flex-direction: column-reverse;
+        } */
+        .box {
+            padding: 5px 45px;
+            margin: 5px;
+            background-color: #222;
+        }
+        p {
+            color: #fff;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container op1">
+        <div class="box"><p>1</p></div>
+        <div class="box"><p>2</p></div>
+        <div class="box"><p>3</p></div>
+        <div class="box"><p>4</p></div>
+        <div class="box"><p>5</p></div>
+        <div class="box"><p>6</p></div>
+    </div>
+    <div class="container op2">
+        <div class="box"><p>1</p></div>
+        <div class="box"><p>2</p></div>
+        <div class="box"><p>3</p></div>
+        <div class="box"><p>4</p></div>
+        <div class="box"><p>5</p></div>
+        <div class="box"><p>6</p></div>
+    </div>
+    <div class="container op3">
+        <div class="box"><p>1</p></div>
+        <div class="box"><p>2</p></div>
+        <div class="box"><p>3</p></div>
+        <div class="box"><p>4</p></div>
+        <div class="box"><p>5</p></div>
+        <div class="box"><p>6</p></div>
+    </div>
+    <!-- <div class="container op4">
+        <div class="box"><p>1</p></div>
+        <div class="box"><p>2</p></div>
+        <div class="box"><p>3</p></div>
+    </div> -->
+</body>
+</html>

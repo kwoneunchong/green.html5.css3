@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .wrapper {
+            /* 그리드로 만든다고 선언해줌 */
+            display: grid;
+            /* 열(가로에서)각각의 아이템들 갯수와 사이즈 지정해줌 */
+            grid-template-columns: 200px 200px 200px;
+            /* 행(세로에서)각각의 아이템들 최소 최대 사이즈 지정 */
+            grid-template-rows: minmax(100px auto);
+        }
+        .items {
+            padding: 10px;
+            background-color:#eee;
+        }
+        .items:nth-child(odd) {
+            background-color: #bbb;
+        }
+        </style>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="items">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas nulla voluptate non voluptatibus ipsam eum officia dolore esse aspernatur aperiam. At, fugiat facere? Nemo, modi! At non temporibus accusamus esse.
+        </div>
+        <div class="items">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas nulla voluptate non voluptatibus ipsam eum officia dolore esse aspernatur aperiam. At, fugiat facere? Nemo, modi! At non temporibus accusamus esse.
+        </div>
+        <div class="items">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas nulla voluptate non voluptatibus ipsam eum officia dolore esse aspernatur aperiam. At, fugiat facere? Nemo, modi! At non temporibus accusamus esse.
+        </div>
+        <div class="items">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas nulla voluptate non voluptatibus ipsam eum officia dolore esse aspernatur aperiam. At, fugiat facere? Nemo, modi! At non temporibus accusamus esse.
+        </div>
+        <div class="items">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas nulla voluptate non voluptatibus ipsam eum officia dolore esse aspernatur aperiam. At, fugiat facere? Nemo, modi! At non temporibus accusamus esse.
+        </div>
+    </div>
+</body>
+</html>
