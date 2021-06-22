@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="menu.css">
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Web</a></li>
+            <li><a href="#">Design</a></li>
+            <li><a href="#">Map</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+        <a href="#" id="trigger">Menu</a>
+    </nav>
+
+  <script src="jquery-2.2.4.min.js"></script>
+    <!-- <script src="jquery-2.2.4.min.js"></script> -->
+    <script>
+		$(function () {
+			var trigger = $('#trigger');
+			var menu = $('nav ul');
+            // 메뉴 아이콘 선택시
+			$(trigger).on('click', function (e) {
+				e.preventDefault();
+                // 메뉴 슬라이드 토글
+				menu.slideToggle();
+			});
+            // 브라우저 창의 사이즈가 바뀔때마다
+			$(window).resize(function () {
+                // 브라우저 창의 너비를 구해줌
+				var w = $(window).width();
+				if (w > 320 && menu.is(':hidden')) {  // menu.slideToggle();을 실행시키면 style이 붙으므로 이걸 해제하기 위해
+					// 위 조건에 해당되면 메뉴의 css를 해제 시켜준다.(nav ul 제거)
+                    // 메뉴 슬라이드 토글 실행시 'dispaly:none'이 남는 버그가 발생하므로
+                    menu.removeAttr('style');
+          console.log("remove ul style");
+				}
+			});
+		});
+    </script>
+</body>
+</html>
