@@ -70,17 +70,21 @@
                 });
             });
     
+            // 시간간격으로 실행, 1초에 한번 실행
             setTimeout(function(){
                 $(window).resize();
             }, 1000);
     
+            // 페럴렉스 실행
             $(".bg-holder").parallaxScroll({
                 friction: 0.3
             });
+            
     
+            // 마우스 오버시 실행,오버 후 실행
             $(".icon img").hover(function(){
                 $(this).attr("src", $(this).attr("src").replace(".png", "_over.png"));				
-            }, function(){
+            }, function(){\
                 $(this).attr("src", $(this).attr("src").replace("_over.png", ".png"));
             }); 
         });
