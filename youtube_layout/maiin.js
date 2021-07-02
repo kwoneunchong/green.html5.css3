@@ -1,15 +1,14 @@
-$(function() {
-    $(document).ready(function() {
-        setHeigt();
+$(function(){
+    $( document ).ready(function() {
+        setHeight();
     });
 
-    $(window).resize (function() {
-        setHeigt();
+    $(window).resize(function() {
+        setHeight();
     });
 
     function setHeight() {
         var height = $(window).height();
-        // #main_header 높이 빼줌//
-        $("#main_aside").height(height - 56);
+        $("#main_aside").height(height - 56); // #main_header 높이 빼줌
     }
 });
